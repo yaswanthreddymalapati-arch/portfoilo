@@ -4,19 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yaswanth Reddy Portfolio</title>
+
+  <title>Yaswanth Reddy | AWS DevOps Portfolio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
+      background: #0f172a;
+      color: white;
     }
 
     /* NAVBAR */
 
     nav {
-      background: #0d6efd;
+      background: #020617;
       padding: 15px;
       text-align: center;
     }
@@ -32,14 +36,8 @@
 
     section {
       padding: 60px;
-      background: white;
-      margin: 20px;
-      border-radius: 10px;
-    }
-
-    h1,
-    h2 {
-      color: #0d6efd;
+      max-width: 1000px;
+      margin: auto;
     }
 
     /* HOME */
@@ -48,27 +46,48 @@
       text-align: center;
     }
 
-    /* SKILLS */
-
-    .skills ul {
-      list-style: none;
-      padding: 0;
+    .home h1 {
+      font-size: 40px;
     }
 
-    .skills li {
-      background: #e8f0ff;
-      margin: 8px;
-      padding: 10px;
-      border-radius: 5px;
+    .home h3 {
+      color: #38bdf8;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #020617;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     /* PROJECTS */
 
     .project {
-      background: #f1f1f1;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
+      background: #020617;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .project a {
+      color: #38bdf8;
+      text-decoration: none;
     }
 
     /* CONTACT */
@@ -78,20 +97,22 @@
     }
 
     button {
-      background: #0d6efd;
-      color: white;
+      background: #38bdf8;
       border: none;
       padding: 10px 20px;
       border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #0d6efd;
-      color: white;
+      background: #020617;
+      margin-top: 40px;
     }
   </style>
+
 </head>
 
 <body>
@@ -99,13 +120,16 @@
   <!-- NAVBAR -->
 
   <nav>
+
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
+
   </nav>
+
 
   <!-- HOME -->
 
@@ -123,15 +147,16 @@
 
   </section>
 
+
   <!-- ABOUT -->
 
-  <section id="about">
+  <section id="about" class="about">
 
     <h2>About Me</h2>
 
     <p>
       I am a B.Tech graduate in Electrical and Electronics Engineering
-      with strong interest in Cloud Computing, AWS and DevOps tools.
+      with strong interest in Cloud Computing and DevOps tools.
     </p>
 
     <h3>Education</h3>
@@ -139,13 +164,13 @@
     <ul>
 
       <li>
-        B.Tech - Electrical and Electronics Engineering
+        B.Tech – Electrical and Electronics Engineering
         Audisankara College of Engineering and Technology
         CGPA: 7.72
       </li>
 
       <li>
-        Diploma - Electrical and Electronics Engineering
+        Diploma – Electrical and Electronics Engineering
         Loyola Polytechnic College – 72%
       </li>
 
@@ -165,24 +190,80 @@
 
   </section>
 
+
   <!-- SKILLS -->
 
-  <section id="skills" class="skills">
+  <section id="skills">
 
     <h2>Technical Skills</h2>
 
-    <ul>
+    <div class="skills-grid">
 
-      <li>AWS – EC2, S3, RDS, IAM, VPC, CloudWatch</li>
-      <li>DevOps – Git, GitHub, Docker, Jenkins, Terraform</li>
-      <li>Containerization – Docker</li>
-      <li>Operating Systems – Linux (Ubuntu, CentOS)</li>
-      <li>Scripting – Bash</li>
-      <li>Version Control – Git, GitHub</li>
+      <div class="skill-card">
 
-    </ul>
+        <h3>Cloud</h3>
+
+        <ul>
+
+          <li>AWS EC2</li>
+          <li>AWS S3</li>
+          <li>RDS</li>
+          <li>IAM</li>
+          <li>VPC</li>
+          <li>CloudWatch</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>DevOps Tools</h3>
+
+        <ul>
+
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>Docker</li>
+          <li>Jenkins</li>
+          <li>Terraform</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>Operating Systems</h3>
+
+        <ul>
+
+          <li>Linux (Ubuntu)</li>
+          <li>CentOS</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>Scripting</h3>
+
+        <ul>
+
+          <li>Bash</li>
+
+        </ul>
+
+      </div>
+
+    </div>
 
   </section>
+
 
   <!-- PROJECTS -->
 
@@ -192,32 +273,36 @@
 
     <div class="project">
 
-      <h3>AWS Cloud Project – Website Hosting on EC2</h3>
+      <h3>AWS Cloud Project – Hosting Website on EC2</h3>
 
       <p>
-        Launched an EC2 instance in AWS, installed Apache2 web server
-        on Ubuntu and deployed a static website.
+        Created an EC2 instance, installed Apache web server
+        and deployed a static website.
       </p>
 
       <p><b>Technologies:</b> AWS EC2, Linux, Apache</p>
 
-      <a href="#">GitHub Repo</a>
+      <a href="https://github.com/yaswanthreddymalapati-arch">
+        GitHub Repository
+      </a>
 
     </div>
 
 
     <div class="project">
 
-      <h3>Version Control using Git & GitHub</h3>
+      <h3>Version Control with Git & GitHub</h3>
 
       <p>
-        Managed project code using Git repositories with GitHub integration.
-        Practiced branching, merging and collaboration.
+        Managed project code using Git repositories and GitHub.
+        Practiced branching, merging and collaborative development.
       </p>
 
       <p><b>Technologies:</b> Git, GitHub</p>
 
-      <a href="#">GitHub Repo</a>
+      <a href="https://github.com/yaswanthreddymalapati-arch">
+        GitHub Repository
+      </a>
 
     </div>
 
@@ -227,17 +312,20 @@
       <h3>Docker Mini Project</h3>
 
       <p>
-        Created a Docker image using Dockerfile and deployed a simple
-        web application container on port 8080.
+        Created a Docker image using Dockerfile for a simple web application
+        and deployed the container on port 8080.
       </p>
 
       <p><b>Technologies:</b> Docker</p>
 
-      <a href="#">GitHub Repo</a>
+      <a href="https://github.com/yaswanthreddymalapati-arch">
+        GitHub Repository
+      </a>
 
     </div>
 
   </section>
+
 
   <!-- RESUME -->
 
@@ -245,13 +333,16 @@
 
     <h2>Resume</h2>
 
-    <p>You can download my resume below.</p>
+    <p>Download my resume below.</p>
 
     <a href="resume.pdf" download>
+
       <button>Download Resume</button>
+
     </a>
 
   </section>
+
 
   <!-- CONTACT -->
 
@@ -259,25 +350,41 @@
 
     <h2>Contact</h2>
 
-    <p>Email: yaswanthreddymalapati@gmail.com</p>
-
-    <p>Phone: 9491601375</p>
-
     <p>
-      LinkedIn:
-      <a href="#">www.linkedin.com/in/malapati-yaswanth-reddy</a>
+      <i class="fas fa-envelope"></i>
+      Email:
+      <a href="mailto:yaswanthreddymalapati@gmail.com">
+        yaswanthreddymalapati@gmail.com
+      </a>
     </p>
 
     <p>
+      <i class="fab fa-linkedin"></i>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/malapati-yaswanth-reddy" target="_blank">
+        linkedin.com/in/malapati-yaswanth-reddy
+      </a>
+    </p>
+
+    <p>
+      <i class="fab fa-github"></i>
       GitHub:
-      <a href="#">https://github.com/yaswanthreddymalapati-arch</a>
+      <a href="https://github.com/yaswanthreddymalapati-arch" target="_blank">
+        github.com/yaswanthreddymalapati-arch
+      </a>
+    </p>
+
+    <p>
+      <i class="fas fa-phone"></i>
+      Phone: +91 9491601375
     </p>
 
   </section>
 
+
   <footer>
 
-    <p>© 2026 Yaswanth Reddy | Portfolio</p>
+    <p>© 2026 Yaswanth Reddy | AWS DevOps Portfolio</p>
 
   </footer>
 
